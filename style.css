@@ -1,0 +1,12 @@
+.container {
+    border: solid black 2px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 116px;
+}
+
+.grid {
+    width: 25px;
+    height: 25px;
+    border: solid red 2px;
+}
