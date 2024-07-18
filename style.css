@@ -1,12 +1,20 @@
-.container {
-    border: solid black 2px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 116px;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-.grid {
-    width: 25px;
-    height: 25px;
-    border: solid red 2px;
+body {
+    background-color: rgb(241, 255, 254);
+}
+
+.container {
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.cell {
+    border: 1px solid whitesmoke;
 }

@@ -1,37 +1,27 @@
-const container = document.querySelector(".container");
+const GRIDSIDE = 600;
+let rows = 24;
+let cols = 24;
 
-const gridBox1 = document.createElement("div");
-const gridBox2 = document.createElement("div");
-const gridBox3 = document.createElement("div");
-const gridBox4 = document.createElement("div");
-const gridBox5 = document.createElement("div");
-const gridBox6 = document.createElement("div");
-const gridBox7 = document.createElement("div");
-const gridBox8 = document.createElement("div");
-const gridBox9 = document.createElement("div");
-const gridBox10 = document.createElement("div");
-const gridBox11 = document.createElement("div");
-const gridBox12 = document.createElement("div");
-const gridBox13 = document.createElement("div");
-const gridBox14 = document.createElement("div");
-const gridBox15 = document.createElement("div");
-const gridBox16 = document.createElement("div");
+const container = document.querySelector('.container');
+container.style.width = `${GRIDSIDE}px`;
+container.style.height = `${GRIDSIDE}px`;
 
-gridBox1.classList.add("grid");
-gridBox2.classList.add("grid");
-gridBox3.classList.add("grid");
-gridBox4.classList.add("grid");
-gridBox5.classList.add("grid");
-gridBox6.classList.add("grid");
-gridBox7.classList.add("grid");
-gridBox8.classList.add("grid");
-gridBox9.classList.add("grid");
-gridBox10.classList.add("grid");
-gridBox11.classList.add("grid");
-gridBox12.classList.add("grid");
-gridBox13.classList.add("grid");
-gridBox14.classList.add("grid");
-gridBox15.classList.add("grid");
-gridBox16.classList.add("grid");
-container.append(gridBox1, gridBox2, gridBox3, gridBox4, gridBox5, gridBox6, gridBox7, gridBox8, gridBox9);
-container.append(gridBox10, gridBox11, gridBox12, gridBox13, gridBox14, gridBox15, gridBox16);
+function changeBackgroundColor () {
+    this.style.backgroundColor = "black";
+}
+
+function createGrid () {
+    for (i = 0; i < (rows * cols); i++) {
+        const gridBox = document.createElement('div');
+
+        gridBox.style.width = `${(GRIDSIDE / cols) - 2}px`;
+        gridBox.style.height = `${(GRIDSIDE / rows) - 2}px`;
+        gridBox.classList.add('cell');
+
+        container.appendChild(gridBox);
+
+        gridBox.addEventListener("mouseover", changeBackgroundColor);
+    }
+}
+
+createGrid();
