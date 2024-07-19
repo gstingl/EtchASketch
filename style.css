@@ -3,12 +3,24 @@
     padding: 0px;
 }
 
+header {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    margin-top: 50px;
+    font-weight: 600;
+}
+
 body {
     background-color: rgb(241, 255, 254);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
     margin: 100px auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
     background-color: white;
@@ -17,4 +29,22 @@ body {
 
 .cell {
     border: 1px solid whitesmoke;
+}
+
+.gridSizeButton, .clearGrid {
+    height: 40px;
+    width: 125px;
+    border: solid 2px rgb(196, 237, 255);
+    background-color: white;
+    border-radius: 8px;
+}
+
+.gridSizeButton:hover, .clearGrid:hover {
+    opacity: 1;
+    background: rgb(196, 237, 255);
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+}
+
+.gridSizeButton:active, .clearGrid:active {
+    background-color: rgb(172, 230, 255);
 }
